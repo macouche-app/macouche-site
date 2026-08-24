@@ -64,6 +64,10 @@ button.go{background:#22262B;color:#fff;border-color:#22262B}
 .lib{margin-top:10px;max-height:186px;overflow-y:auto;background:#fff;border:1px solid rgba(0,0,0,.1);
   border-radius:12px;padding:10px 12px;display:none}
 .lib.on{display:block}
+.libhead{font-size:13px;font-weight:800;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+#target{font-family:inherit;font-size:13px;font-weight:800;border:2px solid #22262B;border-radius:8px;padding:5px 9px;background:#fff;cursor:pointer}
+.pick.sel{position:relative}
+.pick.sel::after{content:"modifie";position:absolute;top:-8px;right:8px;background:#22262B;color:#fff;font-size:9px;font-weight:800;padding:1px 7px;border-radius:999px;letter-spacing:.4px}
 .fam{margin-bottom:9px}
 .fam b{font-size:11.5px;font-weight:800;color:#3A4046;display:block;margin-bottom:4px}
 .sw{display:flex;gap:5px}
@@ -98,7 +102,7 @@ figcaption span{display:block;font-size:12.5px;color:#5B6169;margin-top:1px}
     <button id="reset">Palette actuelle</button>
     <span id="msg" style="font-size:12px;color:#17603A;font-weight:800"></span>
   </div>
-  <div class="lib" id="lib"></div>
+  <div class="lib" id="lib"><div class="libhead">Appliquer à&nbsp;: <select id="target"></select></div><div id="libres"></div></div>
   <div class="contrast" id="contrast"></div>
 </div></div>
 
@@ -369,7 +373,11 @@ figcaption span{display:block;font-size:12.5px;color:#5B6169;margin-top:1px}
     box.appendChild(d);
   });
 
-  function select(k){ sel=k;
+  var tgt=document.getElementById('target');
+  BASE.forEach(function(b){ var o=document.createElement('option'); o.value=b.k; o.textContent=b.n; tgt.appendChild(o); });
+  tgt.value=sel;
+  tgt.addEventListener('change',function(){ select(tgt.value); });
+  function select(k){ sel=k; tgt.value=k;
     document.querySelectorAll('.pick').forEach(function(p){ p.classList.toggle('sel',p.dataset.k===k); }); }
 
   function strip(s){
@@ -385,8 +393,8 @@ figcaption span{display:block;font-size:12.5px;color:#5B6169;margin-top:1px}
       var hay = strip(f[0]+' '+f[1]);
       return mots.every(function(m){ return hay.indexOf(m)>=0; });
     }) : [];
-    if(!hits.length){ libBox.classList.remove('on'); libBox.innerHTML=''; return; }
-    libBox.innerHTML = hits.map(function(f){
+    if(!hits.length){ libBox.classList.remove('on'); document.getElementById('libres').innerHTML=''; return; }
+    document.getElementById('libres').innerHTML = hits.map(function(f){
       return '<div class="fam"><b>'+f[0]+'</b><div class="sw">'+f[2].map(function(c){
         return '<i style="background:'+c+'" data-c="'+c+'" title="'+c+'"></i>';
       }).join('')+'</div></div>';
