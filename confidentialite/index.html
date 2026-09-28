@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politique de confidentialité · MaCouche</title>
+<meta name="description" content="Politique de confidentialité de l'application MaCouche.">
+<style>
+  :root{--bg:#F8F4EC;--card:#FFFFFF;--text:#3D2923;--muted:#796A63;--gold:#8C7143;--line:#E2DCD4}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 20px 72px}
+  .brand{font-weight:800;letter-spacing:.02em;color:var(--gold);text-decoration:none;font-size:15px}
+  h1{font-size:32px;line-height:1.2;margin:18px 0 6px}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 28px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:12px}
+  h2{font-size:18px;margin:0 0 10px}
+  p{margin:0 0 10px;color:var(--muted)}
+  ul{margin:0;padding-left:20px;color:var(--muted)}
+  li{margin-bottom:6px}
+  b{color:var(--text)}
+  a{color:var(--gold)}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="../">MaCouche</a>
+  <h1>Politique de confidentialité</h1>
+  <p class="updated">Dernière mise à jour : 21 avril 2026</p>
+
+  <section>
+    <h2>1. Responsable du traitement</h2>
+    <p>Le responsable du traitement des données personnelles est <b>BB Distribe SAS</b>, éditeur de l'application MaCouche.</p>
+    <p>Contact pour toute question relative aux données personnelles : <b><a href="mailto:privacy@macouche.fr">privacy@macouche.fr</a></b> (à défaut : <b><a href="mailto:support@macouche.fr">support@macouche.fr</a></b>).</p>
+  </section>
+
+  <section>
+    <h2>2. Données collectées</h2>
+    <p>Nous collectons et traitons les catégories de données suivantes :</p>
+    <ul>
+      <li><b>Identité</b> : prénom, nom, email, mot de passe (haché), téléphone (optionnel).</li>
+      <li><b>Profil bébé(s)</b> : prénom, date de naissance, poids, uniquement si vous choisissez de les renseigner pour des recommandations de taille.</li>
+      <li><b>Données de commande</b> : adresse de livraison, historique des commandes et abonnements, montants.</li>
+      <li><b>Paiement</b> : les données bancaires sont collectées et traitées <b>directement par Stripe</b>, certifié PCI-DSS niveau 1. Nous ne stockons que l'identifiant Stripe du moyen de paiement.</li>
+      <li><b>Connexion tierce</b> : si vous utilisez Apple Sign-In ou Google Sign-In, nous recevons votre identifiant unique et votre email.</li>
+      <li><b>Notifications push</b> : un identifiant technique (token Expo) est enregistré si vous acceptez les notifications.</li>
+      <li><b>Localisation</b> : utilisée uniquement à votre demande pour rechercher les points relais à proximité. Aucune position n'est conservée.</li>
+      <li><b>Données techniques</b> : journaux serveur (adresse IP, horodatage) à des fins de sécurité et de débogage.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Finalités et bases légales (RGPD art. 6)</h2>
+    <ul>
+      <li><b>Exécution du contrat</b> : création de compte, traitement des commandes, livraison, gestion des abonnements, support client.</li>
+      <li><b>Obligation légale</b> : facturation, comptabilité, lutte contre la fraude.</li>
+      <li><b>Intérêt légitime</b> : sécurité de l'application, prévention des abus, amélioration du service.</li>
+      <li><b>Consentement</b> : notifications push, communications marketing (désinscription possible à tout moment).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Durée de conservation</h2>
+    <ul>
+      <li><b>Compte actif</b> : tant que le compte existe.</li>
+      <li><b>Compte supprimé</b> : les données personnelles sont anonymisées immédiatement (voir section 7). Les commandes anonymisées sont conservées <b>10 ans</b> au titre des obligations comptables (article L123-22 du Code de commerce).</li>
+      <li><b>Compte inactif</b> : après <b>3 ans</b> sans connexion, le compte fait l'objet d'une notification puis d'une anonymisation.</li>
+      <li><b>Logs techniques</b> : 12 mois maximum.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Destinataires et sous-traitants</h2>
+    <p>Vos données sont accessibles aux équipes habilitées de MaCouche et aux sous-traitants suivants, tous engagés contractuellement :</p>
+    <ul>
+      <li><b>Stripe</b> (Irlande / USA, clauses contractuelles types) : paiements et abonnements.</li>
+      <li><b>Brevo</b> (France) : emails transactionnels et marketing.</li>
+      <li><b>DPD France</b> : livraison des commandes.</li>
+      <li><b>Railway Corp.</b> (USA, clauses contractuelles types) : hébergement backend.</li>
+      <li><b>Apple Inc.</b> et <b>Google LLC</b> : uniquement pour les utilisateurs choisissant Sign in with Apple ou Sign in with Google.</li>
+      <li><b>Expo</b> (USA) : distribution des notifications push.</li>
+    </ul>
+    <p style="margin-top:10px">Aucune donnée n'est vendue à des tiers à des fins commerciales.</p>
+  </section>
+
+  <section>
+    <h2>6. Sécurité</h2>
+    <p>Les mots de passe sont stockés sous forme de hash bcrypt. Toutes les communications entre l'Application et nos serveurs sont chiffrées (HTTPS/TLS). L'accès aux données est restreint aux personnes habilitées.</p>
+  </section>
+
+  <section>
+    <h2>7. Vos droits RGPD</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <ul>
+      <li><b>Droit d'accès</b> (art. 15) : obtenir une copie de vos données.</li>
+      <li><b>Droit de rectification</b> (art. 16) : corriger vos données inexactes, possible directement depuis « Profil → Mes informations ».</li>
+      <li><b>Droit à l'effacement / oubli</b> (art. 17) : exigible immédiatement depuis <b>« Profil → Supprimer mon compte »</b>. Vos données personnelles sont anonymisées, les abonnements résiliés et les paiements détachés.</li>
+      <li><b>Droit à la portabilité</b> (art. 20) : recevoir vos données dans un format structuré et lisible, en nous écrivant à <b><a href="mailto:privacy@macouche.fr">privacy@macouche.fr</a></b>.</li>
+      <li><b>Droit d'opposition</b> (art. 21) et <b>de limitation</b> (art. 18).</li>
+      <li><b>Droit de retirer votre consentement</b> à tout moment (notifications, marketing).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Comment exercer vos droits</h2>
+    <p>La plupart de vos droits peuvent être exercés directement dans l'Application (Profil). Pour les autres demandes, écrivez à <b><a href="mailto:privacy@macouche.fr">privacy@macouche.fr</a></b> avec une preuve d'identité. Nous répondons sous <b>30 jours maximum</b>.</p>
+  </section>
+
+  <section>
+    <h2>9. Réclamation</h2>
+    <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) : <a href="https://www.cnil.fr/fr/plaintes">https://www.cnil.fr/fr/plaintes</a></p>
+  </section>
+
+  <section>
+    <h2>10. Cookies et traceurs</h2>
+    <p>L'application mobile MaCouche n'utilise pas de cookies tiers à des fins publicitaires. Seuls des identifiants techniques nécessaires au fonctionnement de l'Application sont stockés localement sur votre appareil (token de connexion sécurisé via expo-secure-store).</p>
+  </section>
+
+  <section>
+    <h2>11. Modifications</h2>
+    <p>Cette politique peut être modifiée pour refléter des évolutions techniques ou légales. Les modifications substantielles vous seront notifiées par email ou directement dans l'Application.</p>
+  </section>
+
+  <footer>© 2026 BB Distribe SAS · MaCouche</footer>
+</main>
+</body>
+</html>
